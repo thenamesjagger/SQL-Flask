@@ -1,0 +1,18 @@
+<!-- templates/search_results.html -->
+
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="static/snippets.css">
+    <script src="static/snippets.js"></script>
+    <title>Snippets</title>
+  </head>
+  <body>
+    <input type="text" id="filter-input" oninput="filterSnippets()">
+    {% for row in rows %}
+      <div class="snippet-card">
+      <h2 class="description">{{ row[1] }}</h2>
+      <pre class="snippet">{{ row[2] }}</pre>
+      </div>
+    {% endfor %}
+  </body>
+</html>
