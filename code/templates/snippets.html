@@ -7,11 +7,13 @@
     <title>Snippets</title>
   </head>
   <body>
+    <a href="/snippets/add">Add Snippet</a>
     <input type="text" id="filter-input" oninput="filterSnippets()">
     {% for row in rows %}
       <div class="snippet-card">
       <h2 class="description">{{ row[1] }}</h2>
       <pre class="snippet">{{ row[2] }}</pre>
+      <button class="delete-button" onclick="deleteSnippet({{ row[0] }})">Delete</button>
       </div>
     {% endfor %}
   </body>

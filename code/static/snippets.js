@@ -12,3 +12,18 @@ function filterSnippets() {
       }
   }
 }
+
+function deleteSnippet(id) {
+    let request = new XMLHttpRequest();
+    request.open("DELETE", `/snippet/${id}`);
+    request.onload = function() {
+      // If the deletion was successful, remove the snippet from the page
+      if (request.status === 200) {
+        let snippetCard = document.querySelector(`.snippet-card h2:contains('Code Snippet ${id}')`).parentNode;
+        snippetCard.parentNode.removeChild(snippetCard);
+      }
+    };
+    request.send();
+    location.reload();
+  }
+  
