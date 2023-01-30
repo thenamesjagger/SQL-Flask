@@ -1,12 +1,14 @@
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="snippets.css">
+    <link rel="stylesheet" type="text/css" href="static/snippets.css">
     <script src="static/snippets.js"></script>
     <title>Snippets</title>
   </head>
   <body>
-    <a href="/snippets/add">Add Snippet</a>
-    <input type="text" id="filter-input" oninput="filterSnippets()">
+    <div class="top">
+      <input type="text" id="filter-input" oninput="filterSnippets()">
+      <button><a href="/snippets/add">Add Snippet</a></button>
+    </div>
     {% for row in rows %}
       <div class="snippet-card">
       <h2 class="description">{{ row[1] }}</h2>

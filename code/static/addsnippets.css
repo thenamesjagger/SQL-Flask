@@ -1,0 +1,11 @@
+body {
+    font-family: "JetBrains Mono", "Ubuntu Mono", Monospace;
+    color: #d8dee9;
+    background-color: #2e3440;
+  }
+  
+h1 {
+    color: #81a1c1;
+    font-family: "JetBrains Mono", "Ubuntu Mono", Monospace;
+    font-family: monospace;
+  }
